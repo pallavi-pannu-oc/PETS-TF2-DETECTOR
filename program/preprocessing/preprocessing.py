@@ -4,7 +4,7 @@ import tarfile
 from shutil import copyfile
 
 DATA_DIR = "/opt/dkube/input"
-target_dir = '/tmp/dataset/'
+target_dir = '/tmp/dataset'
 
 def extract():
     print(DATA_DIR)
