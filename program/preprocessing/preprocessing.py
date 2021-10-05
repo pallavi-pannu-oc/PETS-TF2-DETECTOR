@@ -73,7 +73,7 @@ def data_cleaning():
     ### generating final images and xmls
     
     final_dataset_list=list(set(xml_list)& set(images_list))
-    print(""length of final dataset list)
+    print("length of final dataset list")
     print(len(final_dataset_list))
     print("len of xml_list")
     print(len(xml_list))
