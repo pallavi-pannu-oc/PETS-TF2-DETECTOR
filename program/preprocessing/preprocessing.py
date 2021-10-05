@@ -58,6 +58,8 @@ def data_cleaning():
     source = target_dir+"/annotations/xmls/"
     destination = target_dir +"/images/"
     for file in os.listdir(source):
+        print(file)
+        break
         shutil.copy(source+file,destination)
     xml_list=[]
     images_list=[]
