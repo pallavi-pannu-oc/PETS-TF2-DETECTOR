@@ -80,7 +80,7 @@ def data_cleaning():
         if file in final_dataset_list:
             shutil.copy(source+file+'.xml',target_dir+"/final_images/")
      
-    for file in os.listdir(target_dir +"/data/images/"):
+    for file in os.listdir(target_dir +"/images/"):
         file=file.strip('.jpg')
         if file in final_dataset_list:
             shutil.copy(source+file+'.jpg',target_dir+"/final_images/")
