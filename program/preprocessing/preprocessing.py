@@ -73,17 +73,23 @@ def data_cleaning():
     ### generating final images and xmls
     
     final_dataset_list=list(set(xml_list)& set(images_list))
+    print(""length of final dataset list)
+    print(len(final_dataset_list))
+    print("len of xml_list")
+    print(len(xml_list))
+    print("len of images list")
+    print(len(images_list))
     os.mkdir(target_dir+"/final_images")
-    
-    for file in os.listdir(target_dir+"/annotations/xmls/"):
-        file=file.strip('.xml')
-        if file in final_dataset_list:
-            shutil.copy(source+file+'.xml',target_dir+"/final_images/")
      
     for file in os.listdir(target_dir +"/images/"):
         file=file.strip('.jpg')
         if file in final_dataset_list:
             shutil.copy(source+file+'.jpg',target_dir+"/final_images/")
+    
+    for file in os.listdir(target_dir+"/annotations/xmls/"):
+        file=file.strip('.xml')
+        if file in final_dataset_list:
+            shutil.copy(source+file+'.xml',target_dir+"/final_images/")
             
 
 if __name__ == '__main__':
